@@ -14,5 +14,9 @@
 * The jest.config file is just to let the jest knows where to look for jest environment files.
 
 ## To run the test 
-* npm i //to install the deps
-* npm run test //this to run the exisiting test.
+* By default this test is running in head mode and url is hardcoded for asia geo location.
+// To install the deps
+* npm i or npm ci
+
+// To execute the exisiting test.
+* npm run test
