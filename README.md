@@ -16,9 +16,12 @@
 ## To run the test 
 * By default this test is running in head mode and url is hardcoded for asia geo location.
 // To install the deps
-* npm i or npm ci
-
+```bash
+ npm i or npm ci
+```
 * Did not hard coded the username and password as I was using my own.
-* The location field will accept either Asia or Europe and if nothing is passed it will use North America as the geo location by default and provide the appropriate url.
+* The location field will accept either **Asia** or **Europe** and if nothing is passed it will use **North America** as the geo location by default and provide the appropriate url.
 // To execute the exisiting test.
-* email=${user_email} password=${user_password} location=${Asia/Europe} npm run test
+ ```bash
+ email=${user_email} password=${user_password} location=${Asia/Europe} npm run test
+```
