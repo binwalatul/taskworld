@@ -18,5 +18,7 @@
 // To install the deps
 * npm i or npm ci
 
+* Did not hard coded the username and password as I was using my own.
+* The location field will accept either Asia or Europe and if nothing is passed it will use North America as the geo location by default and provide the appropriate url.
 // To execute the exisiting test.
-* npm run test
+* email=${user_email} password=${user_password} location=${Asia/Europe} npm run test

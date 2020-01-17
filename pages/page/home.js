@@ -2,10 +2,13 @@ const selector = require('../selector/home');
 const home = require('./../../commands');
 
 const loginWithExistingUser = async () => {
-  await page.goto('https://asia-enterprise.taskworld.com/');
+  const url = (process.env.location === 'Asia') ? 'https://asia-enterprise.taskworld.com/' 
+  : (location === 'Europe') ? 'https://europe-enterprise.taskworld.com/login'
+  :'https://enterprise.taskworld.com/login';
+  await page.goto(url);
   await page.waitForSelector(selector.loginForm);
-  await home.setValue(selector.emailTextbox, 'binwal.atul@gmail.com')
-  await home.setValue(selector.passwordTextbox, 'Password123')
+  await home.setValue(selector.emailTextbox, `${ process.env.email }`)
+  await home.setValue(selector.passwordTextbox, `${ process.env.password }`)
   await page.click(selector.loginBtn);
   await page.waitForSelector(selector.loginState);
 };
