@@ -10,6 +10,8 @@ const loginWithExistingUser = async () => {
   await home.setValue(selector.passwordTextbox, `${ process.env.password }`)
   await page.click(selector.loginBtn);
   await page.waitForSelector(selector.loginState);
+  const newProjectText = await page.evaluate(text => text.innerText, await page.$(selector.newProjectText));
+  expect(newProjectText).toContain('New Project');
 };
 
 const createProject = async() => {

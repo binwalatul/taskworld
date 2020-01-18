@@ -4,6 +4,7 @@ module.exports = {
   passwordTextbox: 'input[name=\'password\']',
   loginBtn: 'button .tw-button__main-container',
   loginState: '.tw-sub-layout__content',
+  newProjectText: '.tw-new-project-button-box__text',
   newProjectBtn: '.tw-new-project-button-box',
   newProjectModal: '.tw-modal__content',
   projectNameField: 'input[name="project-name"]',
